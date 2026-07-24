@@ -67,8 +67,9 @@ async function expect_verona_stream_test_topic(page: Page): Promise<void> {
     ]);
     assert.strictEqual(
         await common.get_text_from_selector(page, "#new_conversation_button"),
-        "Start new conversation",
+        "Draft new message",
     );
+    assert.strictEqual(await page.$("#new_direct_message_button"), null);
 }
 
 async function expect_verona_other_topic(page: Page): Promise<void> {
@@ -273,7 +274,7 @@ async function expect_all_direct_messages(page: Page): Promise<void> {
     ]);
     assert.strictEqual(
         await common.get_text_from_selector(page, "#new_conversation_button"),
-        "Start new conversation",
+        "Draft new message",
     );
     assert.strictEqual(await page.title(), "Direct message feed - Zulip Dev - Zulip");
 }

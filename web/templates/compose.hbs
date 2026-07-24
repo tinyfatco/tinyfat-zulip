@@ -24,7 +24,7 @@
                 <button type="button" class="compose_new_conversation_button"
                   id="new_conversation_button"
                   data-tooltip-template-id="new_stream_message_button_tooltip_template">
-                    {{t 'Start new conversation' }}
+                    {{t 'Draft new message' }}
                 </button>
             </div>
             <span class="mobile_button_container">
@@ -34,15 +34,6 @@
                     +
                 </button>
             </span>
-            {{#unless embedded }}
-            <span class="new_direct_message_button_container">
-                <button type="button" class="compose_new_direct_message_button"
-                  id="new_direct_message_button"
-                  data-tooltip-template-id="new_direct_message_button_tooltip_template">
-                    {{t 'New direct message' }}
-                </button>
-            </span>
-            {{/unless}}
         </div>
     </div>
     <div class="message_comp">
