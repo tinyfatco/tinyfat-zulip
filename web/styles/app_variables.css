@@ -321,7 +321,7 @@
     --left-sidebar-max-width: calc(
         20.6429em - var(--left-sidebar-right-margin)
     );
-    --realm-logo-max-width: 12.5em; /* 200px at 16px em */
+    --realm-logo-max-width: 1.25em; /* 20px at 16px em */
     /* Value updated on realm_logo.render() */
     --realm-logo-current-width: var(--realm-logo-max-width);
     /* 10px is just extra margin for content separation */

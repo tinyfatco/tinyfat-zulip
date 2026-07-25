@@ -1180,10 +1180,12 @@ nav {
 
         .nav-logo {
             display: inline-block;
+            width: 1.25em; /* 20px at 16px em */
             height: 1.25em; /* 20px at 16px em */
             max-width: var(--realm-logo-max-width);
 
             @media (height < $short_navbar_cutoff_height) {
+                width: 0.9375em; /* 15px at 16px em */
                 height: 0.9375em; /* 15px at 16px em */
             }
         }

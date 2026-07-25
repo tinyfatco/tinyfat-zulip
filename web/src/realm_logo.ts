@@ -1,7 +1,8 @@
 import $ from "jquery";
 
+import tinyfat_block_t_url from "../../static/images/logo/tinyfat-block-t.svg";
+
 import * as channel from "./channel.ts";
-import * as settings_data from "./settings_data.ts";
 import {current_user, realm} from "./state_data.ts";
 import * as ui_util from "./ui_util.ts";
 import * as upload_widget from "./upload_widget.ts";
@@ -90,11 +91,7 @@ export function render(): void {
     }
 
     const $realm_logo = $<HTMLImageElement>("#realm-navbar-wide-logo");
-    if (settings_data.using_dark_theme() && realm.realm_night_logo_source !== "D") {
-        $realm_logo.attr("src", realm.realm_night_logo_url);
-    } else {
-        $realm_logo.attr("src", realm.realm_logo_url);
-    }
+    $realm_logo.attr("src", tinyfat_block_t_url);
 
     $realm_logo.on("load", () => {
         const logo_width = $realm_logo.width();
@@ -122,6 +119,6 @@ export function initialize(): void {
     // render once
     render();
 
-    // Rerender the realm-navbar-wide-logo when the browser detects color scheme changes.
+    // Rerender the organization logo previews when the browser detects color scheme changes.
     ui_util.listener_for_preferred_color_scheme_change(render);
 }
